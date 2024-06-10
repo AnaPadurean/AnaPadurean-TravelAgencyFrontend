@@ -11,14 +11,16 @@ import { EventService } from './demo/service/event.service';
 import { IconService } from './demo/service/icon.service';
 import { NodeService } from './demo/service/node.service';
 import { PhotoService } from './demo/service/photo.service';
-
+import { ContinentsComponent } from './demo/components/continents/continents.component';
+import { ContinentsService } from './demo/service/continents.service';
+import { TableModule } from 'primeng/table';
 @NgModule({
     declarations: [AppComponent, NotfoundComponent],
-    imports: [AppRoutingModule, AppLayoutModule],
+    imports: [AppRoutingModule, AppLayoutModule, TableModule],
     providers: [
         { provide: LocationStrategy, useClass: PathLocationStrategy },
         CountryService, CustomerService, EventService, IconService, NodeService,
-        PhotoService, ProductService
+        PhotoService, ProductService, ContinentsComponent, ContinentsService
     ],
     bootstrap: [AppComponent],
 })
